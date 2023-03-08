@@ -1,0 +1,165 @@
+{
+  "data": [
+    {
+      "name": "OpenHPI",
+      "languages": [
+        "German",
+        "English"
+      ],
+      "topics": [
+        "Compsci",
+        "Quantum"
+      ],
+      "format": "MOOC",
+      "url": "open.hpi.de"
+    },
+    {
+      "name": "Edukatico",
+      "languages": [
+        "English",
+        "German"
+      ],
+      "topics": [
+        "various"
+      ],
+      "format": "MOOCs",
+      "url": "www.edukatico.org/en"
+    },
+    {
+      "name": "Wolfram Courses",
+      "languages": [
+        "English"
+      ],
+      "topics": [
+        "Maths",
+        "Physics",
+        "Compsci"
+      ],
+      "format": "MOOCs",
+      "url": "www.wolfram.com/wolfram-u"
+    },
+    {
+      "name": "ETHZ lectures",
+      "languages": [
+        "German",
+        "English"
+      ],
+      "topics": [
+        "Physics",
+        "Maths",
+        "Compsci"
+      ],
+      "format": "lectures",
+      "url": "video.ethz.ch/lectures.html"
+    },
+    {
+      "name": "Oncampus courses",
+      "languages": [
+        "German"
+      ],
+      "topics": [
+        "Maths"
+      ],
+      "format": "MOOCs",
+      "url": "www.oncampus.de"
+    },
+    {
+      "name": "OpenStax",
+      "languages": [
+        "English"
+      ],
+      "topics": [
+        "various"
+      ],
+      "format": "textbooks",
+      "url": "openstax.org"
+    },
+    {
+      "name": "PSI courses",
+      "languages": [
+        "English"
+      ],
+      "topics": [
+        "Physics",
+        "Quantum"
+      ],
+      "format": "MOOCs",
+      "url": "psi-online.perimeterinstitute.ca"
+    },
+    {
+      "name": "The Feynman Lectures on Physics",
+      "languages": [
+        "English"
+      ],
+      "topics": [
+        "Physics",
+        "Quantum"
+      ],
+      "format": "textbook",
+      "url": "www.feynmanlectures.caltech.edu/"
+    },
+    {
+      "name": "",
+      "languages": [
+      ],
+      "topics": [
+      ],
+      "format": "",
+      "url": ""
+    },
+    {
+      "name": "",
+      "languages": [
+      ],
+      "topics": [
+      ],
+      "format": "",
+      "url": ""
+    },
+    {
+      "name": "",
+      "languages": [
+      ],
+      "topics": [
+      ],
+      "format": "",
+      "url": ""
+    },
+    {
+      "name": "",
+      "languages": [
+      ],
+      "topics": [
+      ],
+      "format": "",
+      "url": ""
+    },
+    {
+      "name": "",
+      "languages": [
+      ],
+      "topics": [
+      ],
+      "format": "",
+      "url": ""
+    },
+    {
+      "name": "",
+      "languages": [
+      ],
+      "topics": [
+      ],
+      "format": "",
+      "url": ""
+    },
+    {
+      "name": "",
+      "languages": [
+      ],
+      "topics": [
+      ],
+      "format": "",
+      "url": ""
+    }
+  ]
+}
