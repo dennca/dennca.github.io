@@ -1,0 +1,9 @@
+.container h2 {
+    font-variant: small-caps;
+}
+
+.card-header {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}

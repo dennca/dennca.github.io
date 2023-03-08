@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Login popup</title>
+  <script type="text/javascript">
+    function closeLogin() {
+      document.getElementById("container").removeChild(document.getElementById("overlay"));
+    }
+    function loginOverlay () {
+      var overlay = document.createElement("div");
+      var loginForm = document.createElement("div");
+      overlay.setAttribute("id", "overlay");
+      overlay.style.position = "fixed";
+      overlay.style.top = "0px";
+      overlay.style.left = "0px";
+      overlay.style.right = "0px";
+      overlay.style.bottom = "0px";
+      overlay.style.backgroundColor = "rgba(82,255,53,0.56)";
+      loginForm.style.width = "500px";
+      loginForm.style.marginTop = "100px";
+      loginForm.style.marginLeft = "auto";
+      loginForm.style.marginRight = "auto";
+      loginForm.innerHTML = "<form> First name: <input type=\"text\" name=\"firstname\"/> <br/>Lastname: <input type=\"text\" name=\"lastname\"/></form><br/><a href='#c' onclick='closeLogin();'>close</a> ";
+      overlay.appendChild(loginForm);
+      document.getElementById("container").appendChild(overlay);
+    }
+  </script>
+</head>
+<body>
+<div id="container"><a href="#" onclick="loginOverlay()">Login</a></div>
+</body>
+</html>

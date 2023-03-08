@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+
+  <style>
+    textarea {
+      resize: none;
+      width: 99%;
+      height: 20vh;
+    }
+  </style>
+</head>
+<body>
+
+<textarea id="source"></textarea>
+<pre>
+  <code id="result"></code>
+</pre>
+
+
+<code>
+  print("something")
+  qc = QuantumCircuit(1,1)
+  qc.x(0)
+  qc.measure(0,0)
+  qc.draw()
+</code>
+
+
+<script>
+  const source = document.getElementById('source');
+  const result = document.getElementById('result');
+
+  const inputHandler = function(e) {
+    result.innerHTML = e.target.value;
+    //result.innerHTML = '<code>' + (e.target.value) + '</code>';
+  }
+
+  source.addEventListener('input', inputHandler);
+  source.addEventListener('propertychange', inputHandler); // for IE8
+  // Firefox/Edge18-/IE9+ don’t fire on <select><option>
+  // source.addEventListener('change', inputHandler);
+</script>
+
+<!-- higlight javascript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</body>
+</html>
