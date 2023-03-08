@@ -3,260 +3,685 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Resources</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bootstrap demo</title>
+
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- highlight, font-awesome, animations -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-
-    <!-- Custom fonts for this template
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">-->
-
-    <!-- Custom styles for this template -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this page -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-bs4/3.2.2/dataTables.bootstrap4.min.css" rel="stylesheet">
-
-    <!--<link href="css/style.css" rel="stylesheet">
+    <!-- misc stylesheets -->
+    <link href="/css/carousel.css" rel="stylesheet">
+    <link href="/css/features.css" rel="stylesheet">
+    <link href="/css/timeline.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
 
     <style>
-        .bg-info {
-            background: #0dcaf0  !important;
+        .carousel {
+            margin-bottom: 0px !important;
         }
-        .bg-warning {
-            background: #ffc107  !important;
-        }
-        .bg-danger {
-            background: #dc3545 !important;
-        }
-        .bg-success {
-            background: #198754 !important;
-        }
-        .bg-gradient-primary {
-            background-color: #4e73df !important;
-            background-image: linear-gradient(180deg,#0d6efd 10%,#0a58ca 100%) !important;
-            background-size: cover;
-        }
-    </style>-->
-
-    <style>
-        progress {
+        #overlay {
+            background: orange;
             width: 100%;
+            height: 20vh;
+            padding: 200px 400px;
+            display: none !important;
         }
-        .pagination {
-            float: right;
+
+        #main {
+
         }
     </style>
 
 </head>
 
-<body id="page-top">
+<body id="top" class="py-5">
 
-<!-- Page Wrapper -->
-<div class="">
+<header class="p-3 text-bg-white border-bottom bg-white fixed-top">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-black text-decoration-none">
+            </a>
 
-    <!-- Topbar-->
-    <header class="p-3 text-bg-white border-bottom bg-white fixed-top">
-        <div class="container" style="max-width: 100%">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-black text-decoration-none">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="game.html" class="nav-link px-2 text-warning-emphasis"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="materials.html" class="nav-link px-2 text-secondary-emphasis"><i class="fa-solid fa-graduation-cap"></i> Materials</a></li>
+                <li><a href="tests.html" class="nav-link px-2 text-secondary-emphasis"><i class="fa-solid fa-list-check"></i> Tests</a></li>
+                <li><a href="resources.html" class="nav-link px-2 text-secondary-emphasis"><i class="fa-solid fa-laptop-file"></i> Resources</a></li>
+                <li><a href="faq.html" class="nav-link px-2 text-secondary-emphasis"><i class="fa-solid fa-comments"></i> FAQ</a></li>
+            </ul>
+
+            <div class="dropdown text-end">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/denvitko.png" alt="mdo" width="32" height="32" class="rounded-circle">
                 </a>
-
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-warning-emphasis"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="#" class="nav-link px-2 text-secondary-emphasis"><i class="fa-solid fa-graduation-cap"></i> Materials</a></li>
-                    <li><a href="#" class="nav-link px-2 text-secondary-emphasis"><i class="fa-solid fa-list-check"></i> Tests</a></li>
-                    <li><a href="#" class="nav-link px-2 text-secondary-emphasis"><i class="fa-solid fa-laptop-file"></i> Resources</a></li>
-                    <li><a href="#" class="nav-link px-2 text-secondary-emphasis"><i class="fa-solid fa-comments"></i> FAQ</a></li>
+                <ul class="dropdown-menu text-small">
+                    <li><a class="dropdown-item" href="#">Tests</a>
+                    <li><a class="dropdown-item" href="resources.html">My progress</a>
+                    </li><li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="b-example-divider"></div>
 
-                <div class="dropdown text-end">
-                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/denvitko.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                    </a>
-                    <ul class="dropdown-menu text-small">
-                        <li><a class="dropdown-item" href="#">Tests</a>
-                        <li><a class="dropdown-item" href="progress/resources.html">My progress</a>
-                        </li><li><a class="dropdown-item" href="#">New project...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/img/quantum/carousel_1.jpg" style="object-position: center -200px;" class="bd-placeholder-img d-block w-100" alt="...">
+            <div class="container">
+                <div class="carousel-caption text-start text-white">
+                    <h1>Česká poezie</h1>
+                    <p>1. polovina 20. století</p>
+                    <nav class="breadcrumb bg-warning rounded px-2 " style="width: fit-content">
+                        <kbd class="breadcrumb-item bg-transparent"><a href="/game.html">Home</a></kbd>
+                        <kbd class="breadcrumb-item bg-transparent active"><a href="/materials.html">Materials</a></kbd>
+                        <kbd class="breadcrumb-item bg-transparent active" aria-current="page"><a href="#main"><i class="fa-solid fa-chevron-down"></i></a></kbd>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/img/quantum/carousel_2.jpg" style="object-position: center -200px;" class="bd-placeholder-img d-block w-100" alt="...">
+            <div class="container">
+                <div class="carousel-caption text-start text-white">
+                    <h1>Česká poezie</h1>
+                    <p>1. polovina 20. století</p>
+                    <nav class="breadcrumb bg-warning rounded px-2 " style="width: fit-content">
+                        <kbd class="breadcrumb-item bg-transparent"><a href="/game.html">Home</a></kbd>
+                        <kbd class="breadcrumb-item bg-transparent active"><a href="/materials.html">Materials</a></kbd>
+                        <kbd class="breadcrumb-item bg-transparent active" aria-current="page"><a href="#main"><i class="fa-solid fa-chevron-down"></i></a></kbd>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/img/quantum/carousel_3.jpg" style="object-position: center -350px;" class="bd-placeholder-img d-block w-100" alt="...">
+            <div class="container">
+                <div class="carousel-caption text-start text-white">
+                    <h1>Česká poezie</h1>
+                    <p>1. polovina 20. století</p>
+                    <nav class="breadcrumb bg-warning rounded px-2 " style="width: fit-content">
+                        <kbd class="breadcrumb-item bg-transparent"><a href="/game.html">Home</a></kbd>
+                        <kbd class="breadcrumb-item bg-transparent active"><a href="/materials.html">Materials</a></kbd>
+                        <kbd class="breadcrumb-item bg-transparent active" aria-current="page"><a href="#main"><i class="fa-solid fa-chevron-down"></i></a></kbd>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div id="overlay" class="" style="display:flex; flex-direction: column; align-items: center">
+    <input type="password" placeholder="passcode goes here..." class="form-control">
+    <button class="btn btn-primary my-5" type="submit">Let me in!</button>
+    <div class="col-md-4">
+        <label for="validationServerUsername" class="form-label">Username</label>
+        <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend3">@</span>
+            <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
+            <div class="invalid-feedback">
+                Please choose a username.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Content
+================================================== -->
+<div class="container px-4 py-5" id="main">
+
+    <h2 class="pb-2 border-bottom" style="font-variant: small-caps;">Literárně-historický kontext</h2>
+
+    <h3 class="fs-4">Poetismus</h3>
+
+    <pre>
+        <code>
+            print("something")
+            qc = QuantumCircuit(1,1)
+            qc.x(0)
+            qc.measure(0,0)
+            qc.draw()
+        </code>
+    </pre>
+
+
+
+    <ul>
+        <li>výlučně český avantgardní směr</li>
+        <span class="fw-bold">manifest</span>: Karel Taige (Poetismus), V. Nezval (Papoušek na motocyklu) &rarr; zakladatelé
+        <li>skupina Devětsil (1920), měsíčník ReD (Revue Devětsilu)</li>
+        <li>umění žít a užívat si, svět jako místo radosti, ovlivněn tvorbou Apollinaira</li>
+        <li>hravá poezie, experimenty se slovy, vynechání čárek, volné řetězení představ</li>
+        <li>optimistická, radostná, vyhýbá se závažným tématům</li>
+        <li>obdiv techniky, velkoměsta, exotiky, cestování, inspirace cirkusem, poutěmi, filmem</li>
+    </ul>
+
+    <h3 class="fs-4">Surrealismus</h3>
+    <ul>
+        <li>z fr. surréalisme = nadrealismus, zakladatel André Breton</li>
+        <li>obraznost, fantazie, sen, volný tok obrazů bez rozumu, vliv Freudovy psychoanalýzy</li>
+        <li>Vítězslav Nezval, Konstantin Biebl</li>
+    </ul>
+
+    <h3 class="fs-4">Existencialismus</h3>
+    <ul>
+        <li>z fr. existence = bytí, člověk jako osamocený a odcizený jedinec</li>
+        <li>obraz světa lidí trpících vnitř. pochybami, beznaděj, zoufalství, hnus</li>
+        <li>snaha se osvobodit, život chápán jako směřování k smrti</li>
+        <li>Sartre, Camus, Orten</li>
+    </ul>
+
+    <h3 class="fs-4">Proletářská literatura, soc. realismus</h3>
+    <ul>
+        <li>stať Proletářské umění od Wolkera, vliv Maxima Gorkého</li>
+        <li>společenské rozpory, sny o spravedlivější společ., hrdinství</li>
+        <li>Neumann, Wolker</li>
+    </ul>
+
+    <h2 class="py-2" style="font-variant: small-caps;">Autoři</h2>
+    <h3 class="py-2 border-bottom" style="font-variant: small-caps;">Proletářská poezie</h3>
+    <section class="cd-timeline cd-container">
+        <!--<div class="cd-timeline-block reveal">
+          <div class="cd-timeline-img cd-picture">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="cd-timeline-person">
+              <h2>XX XX</h2>
+              <div class="timeline-content-info">
+                <div class="timeline-content-info-title">
+                  <i class="fa-solid fa-signature" aria-hidden="true"></i>
+                  Xxxx
+                </div>
+                <div class="timeline-content-info-date">
+                  <i class="fa-solid fa-cross" aria-hidden="true"></i>
+                  xxxx - xxxx
+                </div>
+              </div>
+              <ul class="content-skills">
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+              </ul>
+              <button type="button" class="btn btn-sm btn-outline-warning my-2" data-bs-toggle="modal" data-bs-target="#XXxxxx">
+                číst dále <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>-->
+        <div class="cd-timeline-block reveal">
+            <div class="cd-timeline-img cd-picture">
+            </div>
+            <div class="cd-timeline-content">
+                <div class="cd-timeline-person">
+                    <h2>Jiří Wolker</h2>
+                    <div class="timeline-content-info">
+                        <div class="timeline-content-info-title">
+                            <i class="fa-solid fa-signature" aria-hidden="true"></i>
+                            Xxxx
+                        </div>
+                        <div class="timeline-content-info-date">
+                            <i class="fa-solid fa-cross" aria-hidden="true"></i>
+                            xxxx - xxxx
+                        </div>
+                    </div>
+                    <ul class="content-skills">
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ul>
+                    <button type="button" class="btn btn-sm btn-outline-warning my-2" data-bs-toggle="modal" data-bs-target="#JWolker">
+                        číst dále <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div> <!-- JIŘÍ WOLKER -->
+        <div class="cd-timeline-block reveal">
+            <div class="cd-timeline-img cd-picture">
+            </div>
+            <div class="cd-timeline-content">
+                <div class="cd-timeline-person">
+                    <h2>Josef Hora</h2>
+                    <div class="timeline-content-info">
+                        <div class="timeline-content-info-title">
+                            <i class="fa-solid fa-signature" aria-hidden="true"></i>
+                            Čech
+                        </div>
+                        <div class="timeline-content-info-date">
+                            <i class="fa-solid fa-cross" aria-hidden="true"></i>
+                            xxxx - xxxx
+                        </div>
+                    </div>
+                    <ul class="content-skills">
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ul>
+                    <button type="button" class="btn btn-sm btn-outline-warning my-2" data-bs-toggle="modal" data-bs-target="#JHora">
+                        číst dále <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div> <!-- JOSEF HORA -->
+    </section>
+    <h3 class="py-2 border-bottom" style="font-variant: small-caps;">Meziválečná avantgarda</h3>
+    <section class="cd-timeline cd-container">
+        <div class="cd-timeline-block reveal">
+            <div class="cd-timeline-img cd-picture">
+            </div>
+            <div class="cd-timeline-content">
+                <div class="cd-timeline-person">
+                    <h2>Jaroslav Seifert</h2>
+                    <div class="timeline-content-info">
+                        <div class="timeline-content-info-title">
+                            <i class="fa-solid fa-signature" aria-hidden="true"></i>
+                            Čech
+                        </div>
+                        <div class="timeline-content-info-date">
+                            <i class="fa-solid fa-cross" aria-hidden="true"></i>
+                            1901 - 1986
+                        </div>
+                    </div>
+                    <ul class="content-skills">
+                        <li>Nobelova cena</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ul>
+                    <button type="button" class="btn btn-sm btn-outline-warning my-2" data-bs-toggle="modal" data-bs-target="#JSeifert">
+                        číst dále <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- JAROSLAV SEIFERT -->
+        <div class="cd-timeline-block reveal">
+            <div class="cd-timeline-img cd-picture">
+            </div>
+            <div class="cd-timeline-content">
+                <div class="cd-timeline-person">
+                    <h2>Vítězslav Nezval</h2>
+                    <div class="timeline-content-info">
+                        <div class="timeline-content-info-title">
+                            <i class="fa-solid fa-signature" aria-hidden="true"></i>
+                            Čech
+                        </div>
+                        <div class="timeline-content-info-date">
+                            <i class="fa-solid fa-cross" aria-hidden="true"></i>
+                            1900 - 1958
+                        </div>
+                    </div>
+                    <ul class="content-skills">
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ul>
+                    <button type="button" class="btn btn-sm btn-outline-warning my-2" data-bs-toggle="modal" data-bs-target="#VNezval">
+                        číst dále <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div> <!-- VÍTĚZSLAV NEZVAL -->
+        <div class="cd-timeline-block reveal">
+            <div class="cd-timeline-img cd-picture">
+            </div>
+            <div class="cd-timeline-content">
+                <div class="cd-timeline-person">
+                    <h2>Konstantin Biebl</h2>
+                    <div class="timeline-content-info">
+                        <div class="timeline-content-info-title">
+                            <i class="fa-solid fa-signature" aria-hidden="true"></i>
+                            Čech
+                        </div>
+                        <div class="timeline-content-info-date">
+                            <i class="fa-solid fa-cross" aria-hidden="true"></i>
+                            xxxx - xxxx
+                        </div>
+                    </div>
+                    <ul class="content-skills">
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ul>
+                    <button type="button" class="btn btn-sm btn-outline-warning my-2" data-bs-toggle="modal" data-bs-target="#KBiebl">
+                        číst dále <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div> <!-- KONSTANTIN BIEBL -->
+        <div class="cd-timeline-block reveal">
+            <div class="cd-timeline-img cd-picture">
+            </div>
+            <div class="cd-timeline-content">
+                <div class="cd-timeline-person">
+                    <h2>František Halas</h2>
+                    <div class="timeline-content-info">
+                        <div class="timeline-content-info-title">
+                            <i class="fa-solid fa-signature" aria-hidden="true"></i>
+                            Čech
+                        </div>
+                        <div class="timeline-content-info-date">
+                            <i class="fa-solid fa-cross" aria-hidden="true"></i>
+                            xxxx - xxxx
+                        </div>
+                    </div>
+                    <ul class="content-skills">
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ul>
+                    <button type="button" class="btn btn-sm btn-outline-warning my-2" data-bs-toggle="modal" data-bs-target="#FHalas">
+                        číst dále <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div> <!-- FRANTIŠEK HALAS -->
+        <div class="cd-timeline-block reveal">
+            <div class="cd-timeline-img cd-picture">
+            </div>
+            <div class="cd-timeline-content">
+                <div class="cd-timeline-person">
+                    <h2>František Hrubín</h2>
+                    <div class="timeline-content-info">
+                        <div class="timeline-content-info-title">
+                            <i class="fa-solid fa-signature" aria-hidden="true"></i>
+                            Čech
+                        </div>
+                        <div class="timeline-content-info-date">
+                            <i class="fa-solid fa-cross" aria-hidden="true"></i>
+                            xxxx - xxxx
+                        </div>
+                    </div>
+                    <ul class="content-skills">
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ul>
+                    <button type="button" class="btn btn-sm btn-outline-warning my-2" data-bs-toggle="modal" data-bs-target="#XXxxxx">
+                        číst dále <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- FRANTIŠEK HRUBÍN -->
+        <div class="cd-timeline-block reveal">
+            <div class="cd-timeline-img cd-picture">
+            </div>
+            <div class="cd-timeline-content">
+                <div class="cd-timeline-person">
+                    <h2>XX XX</h2>
+                    <div class="timeline-content-info">
+                        <div class="timeline-content-info-title">
+                            <i class="fa-solid fa-signature" aria-hidden="true"></i>
+                            Čech
+                        </div>
+                        <div class="timeline-content-info-date">
+                            <i class="fa-solid fa-cross" aria-hidden="true"></i>
+                            xxxx - xxxx
+                        </div>
+                    </div>
+                    <ul class="content-skills">
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ul>
+                    <button type="button" class="btn btn-sm btn-outline-warning my-2" data-bs-toggle="modal" data-bs-target="#XXxxxx">
+                        číst dále <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- VILÉM ZÁVADA -->
+        <div class="cd-timeline-block reveal">
+            <div class="cd-timeline-img cd-picture">
+            </div>
+            <div class="cd-timeline-content">
+                <div class="cd-timeline-person">
+                    <h2>XX XX</h2>
+                    <div class="timeline-content-info">
+                        <div class="timeline-content-info-title">
+                            <i class="fa-solid fa-signature" aria-hidden="true"></i>
+                            Čech
+                        </div>
+                        <div class="timeline-content-info-date">
+                            <i class="fa-solid fa-cross" aria-hidden="true"></i>
+                            xxxx - xxxx
+                        </div>
+                    </div>
+                    <ul class="content-skills">
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ul>
+                    <button type="button" class="btn btn-sm btn-outline-warning my-2" data-bs-toggle="modal" data-bs-target="#XXxxxx">
+                        číst dále <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- VLADIMÍR HOLAN -->
+        <div class="cd-timeline-block reveal">
+            <div class="cd-timeline-img cd-picture">
+            </div>
+            <div class="cd-timeline-content">
+                <div class="cd-timeline-person">
+                    <h2>XX XX</h2>
+                    <div class="timeline-content-info">
+                        <div class="timeline-content-info-title">
+                            <i class="fa-solid fa-signature" aria-hidden="true"></i>
+                            Čech
+                        </div>
+                        <div class="timeline-content-info-date">
+                            <i class="fa-solid fa-cross" aria-hidden="true"></i>
+                            xxxx - xxxx
+                        </div>
+                    </div>
+                    <ul class="content-skills">
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ul>
+                    <button type="button" class="btn btn-sm btn-outline-warning my-2" data-bs-toggle="modal" data-bs-target="#XXxxxx">
+                        číst dále <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- JIŘÍ ORTEN -->
+        <div class="cd-timeline-block reveal">
+            <div class="cd-timeline-img cd-picture">
+            </div>
+            <div class="cd-timeline-content">
+                <div class="cd-timeline-person">
+                    <h2>XX XX</h2>
+                    <div class="timeline-content-info">
+                        <div class="timeline-content-info-title">
+                            <i class="fa-solid fa-signature" aria-hidden="true"></i>
+                            Čech
+                        </div>
+                        <div class="timeline-content-info-date">
+                            <i class="fa-solid fa-cross" aria-hidden="true"></i>
+                            xxxx - xxxx
+                        </div>
+                    </div>
+                    <ul class="content-skills">
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ul>
+                    <button type="button" class="btn btn-sm btn-outline-warning my-2" data-bs-toggle="modal" data-bs-target="#XXxxxx">
+                        číst dále <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- JOSEF KAINAR -->
+    </section>
+</div>
+
+<div class="modal fade" id="GOrwell" tabindex="-1" aria-labelledby="GOrwell" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-4" id="GOrwellLabel">George Orwell</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="modal fade" id="JSeifert" tabindex="-1" aria-labelledby="JSeifert" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-1" id="JSeifertLabel">Jaroslav Seifert</h1><span class="fs-4 text-muted px-3">(1901 - 1986)</span>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="bio">
+                    <kbd>básník</kbd> <kbd>novinář</kbd> <kbd>překladatel</kbd>
+                    <ul style="list-style-type: '– '" class="py-3">
+                        <li>narodil se v Praze na Žižkově, nedokončil studia, Nobelova cena</li>
+                    </ul>
+                </div>
+
+                <div class="work py-2">
+                    <h2>Díla</h2>
+                    <ul>
+                        <li>sb. <span class="work-title">Město v slzách</span></li>
+                        <li>sb. Samá láska</li>
+                        <li>sb. Na vlnách T.S.F. – poetismus</li>
+                        <li>sb. Slavík zpívá špatně – poetismus</li>
+                        <li>sb. Jablko z klína</li>
+                        <li>sb. Ruce Venušiny</li>
+                        <li>sb. Maminka – vzpomínka na maminku</li>
+                        <li>sb. Chlapec a hvězdy – pohádkové motivy, melancholie</li>
+                        <li>sb. Zhasněte světla – reakce na mnichovskou zradu</li>
+                        <li>kniha Všecky krásy světa – paměti</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </header>
-    <div class="b-example-divider"></div>
-    <!-- End of Topbar -->
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column" style="padding-top: 5.5em;">
-
-        <!-- Main Content -->
-        <div id="content">
-
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <h1 class="h3 mb-2 text-gray-800">Resources</h1>
-                <p class="mb-4">Database of various online resources...</p>
-
-                <!-- DataTales Example -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Quantum</h6>
-                    </div>
-                    <div class="card-body">
-
-                        <table id="example" class="table table-bordered" style="width:100%" width="100%" cellspacing="0">
-                            <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Url</th>
-                                <th>Languages</th>
-                                <th>Topics</th>
-                                <th>Format</th>
-                                <th>Date Added</th>
-                            </tr>
-                            </thead>
-                            <tfoot>
-                            <tr>
-                                <th>Name</th>
-                                <th>Url</th>
-                                <th>Languages</th>
-                                <th>Topics</th>
-                                <th>Format</th>
-                                <th>Date Added</th>
-                            </tr>
-                            </tfoot>
-                        </table>
-
-
-                        <!--<div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Url</th>
-                                    <th>Languages</th>
-                                    <th>Topics</th>
-                                    <th>Format</th>
-                                    <th>Date Added</th>
-                                </tr>
-                                </thead>
-                                <tfoot>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Url</th>
-                                    <th>Languages</th>
-                                    <th>Topics</th>
-                                    <th>Format</th>
-                                    <th>Date Added</th>
-                                </tr>
-                                </tfoot>
-                                <tbody>
-                                <tr>
-                                    <td>OpenHPI</td>
-                                    <td><a href="https://open.hpi.de/">open.hpi.de</a></td>
-                                    <td><kbd class="bg-success">German</kbd> <kbd>English</kbd></td>
-                                    <td><kbd>Quantum</kbd> <kbd>Compsci</kbd></td>
-                                    <td>MOOCs</td>
-                                    <td>2023/02/25</td>
-                                </tr>
-                                <tr>
-                                    <td>Wolfram Courses</td>
-                                    <td><a href="https://www.wolfram.com/wolfram-u/">wolfram.com/wolfram-u</a></td>
-                                    <td><kbd class="bg-danger">English</kbd></td>
-                                    <td><kbd>Math(s)</kbd> <kbd>Compsci</kbd> <kbd class="bg-info">Physics</kbd></td>
-                                    <td>MOOCs</td>
-                                    <td>2023/02/25</td>
-                                </tr>
-                                <tr>
-                                    <td>OpenHPI</td>
-                                    <td><a href="https://open.hpi.de/">open.hpi.de</a></td>
-                                    <td><kbd class="bg-success">German</kbd> <kbd>English</kbd></td>
-                                    <td><kbd>Quantum</kbd> <kbd>Compsci</kbd></td>
-                                    <td>MOOCs</td>
-                                    <td>2023/02/25</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>-->
-                    </div>
-                </div>
-
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
-            <!-- /.container-fluid -->
-
         </div>
-        <!-- End of Main Content -->
-
-        <!-- FOOTER -->
-        <!--<footer class="container py-4 border-top">
-            <footer class="container border-top py-4">
-            <p class="float-end"><a href="#">Back to top</a></p>-->
-            <!--<p>&copy; 2023 LiTeRa &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-        </footer>-->
-        <!-- End of Footer -->
-
     </div>
-    <!-- End of Content Wrapper -->
-
 </div>
-<!-- End of Page Wrapper -->
-
-<!-- Scroll to Top Button
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
--->
-
-<!-- Logout Modal
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" id="VNezval" tabindex="-1" aria-labelledby="VNezval" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
+                <h1 class="modal-title fs-2" id="VNezvalLabel">Vítězslav Nezval <span class="years">(1900 - 1958)</span></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-body">
+                <div class="bio">
+                    <kbd>básník</kbd> <kbd>spisovatel</kbd> <kbd>překladatel</kbd> <kbd>nár. umělec</kbd>
+                    <ul style="list-style-type: '– '" class="py-3">
+                        <li>narozen v Biskoupkách u Brna, rodina venkov. učitele, nedokončil studium práv a filozofie</li>
+                        <li>psal do novin a časopisů, hodně cestoval, aktivní v KSČ, pohřben na Vyšehradě</li>
+                        <li>vstoupil do Devětsilu, zakladatel poetismu, vůdčí osobnost českého surrealismu</li>
+                        <li>ocenění Národní umělec</li>
+                        <li>tvorba: lehkost, rytmus a hudebnost, odvaha experimentovat, hra se slovy, fantazie </li>
+                    </ul>
+                </div>
+                <div class="work">
+                    <h2 class="fs-4">Díla</h2>
+                    <h3 class="fs-5">Poezie</h3>
+                    <ul>
+                        <li>b. <span class="work-title">Most</span> – proletářská, středoškolská studia, vzpomínky na domov</li>
+                        <li>
+                            sb. <span class="work-title">Pantomima</span> – poetismus, hříčky a kaligramy, scénky
+                            <ul>
+                                <li>b. <span class="work-title">Abeceda</span> – inspirace Rimbaudem, volné asociace, 4verší pro každé písmeno</li>
+                                <li>b. <span class="work-title">Podivuhodný kouzelník</span> – poetismus, věnována Mahenovi, tajemství a krása
+                                    života, fantazie, odmítnutí starého, opakování čísla 7</li>
+                            </ul>
+                        </li>
+                        <li>
+                            cyklus <span class="work-title">Básně noci</span> – poetismus, radost x smutek, život x smrt
+                            <ul>
+                                <li>sb. <span class="work-title">Akrobat</span> – poetismus</li>
+                                <li>sb. <span class="work-title">Edison</span> – 5 zpěvů, více témat, pravidelné refrény, obdiv techniky a tvůrčí síly</li>
+                            </ul>
+                        </li>
+                        <li>sb. <span class="work-title">Sbohem a šáteček</span> – pomezí poetismu a surrealismu, okouzlení z cesty po Fr. a It.</li>
+                        <li>sb. <span class="work-title">Praha s prsty deště</span> – surrealismus, prolínání minulosti a přítomnosti</li>
+                        <li>sb. <span class="work-title">Žena v množném čísle</span> – surrealismus, obrazotvornost a fantazie</li>
+                        <li>sb. <span class="work-title">Absolutní hrobař</span> – surrealismus, odpor k fašismu</li>
+                        <li>sb. <span class="work-title">52 hořských balad věčného studenta Roberta Davida</span> – anonymně, sociální</li>
+                        <li>sb. <span class="work-title">Pět minut za městem</span> – přírodní lyrika, pouto k vlasti, odpor k okupantům</li>
+                        <li>sb. <span class="work-title">Matka naděje</span> – osud těžce nemocné matky a osud národa ohroženého fašismem</li>
+                        <li>sb. <span class="work-title">Pět minut za městem</span> – přírodní lyrika, pouto k vlasti, odpor k okupantům</li>
+                        <li>sb. <span class="work-title">Historický obraz</span>, <span class="work-title">Stalin</span>, <span class="work-title">Zpěv míru</span>, <span class="work-title">Z domoviny</span>, <span class="work-title">Křídla</span>, <span class="work-title">Chrpy a města</span> – 50. léta </li>
+                    </ul>
+                    <h3 class="fs-5">Próza</h3>
+                    <ul>
+                        <li><span class="work-title">Valérie a týden divů</span> – černý román, pomezí snu a skutečnosti</li>
+                        <li><span class="work-title">Anička skřítek a Slaměný Hubert</span> – pro děti</li>
+                        <li><span class="work-title">Z mého života</span> – paměti</li>
+                        <li><span class="work-title">Pražský chodec</span> – cestopis</li>
+                    </ul>
+                    <h3 class="fs-5">Drama</h3>
+                    <ul>
+                        <li><span class="work-title">Milenci z kiosku</span> – kritika doby a revoluční tendence</li>
+                        <li><span class="work-title">Manon Lescaut</span> – veršované, překlad, kněz De Grieux se zamiluje do krásné Manon</li>
+                        <li><span class="work-title">Dnes ještě zapadá slunce nad Atlantidou</span> – nebezpečí atomové války </li>
+                    </ul>
+                </div>
+            </div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="login.html">Logout</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
--->
 
 
-<!-- Bootstrap core JavaScript -->
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<!--<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+<!-- FOOTER -->
+<footer class="container py-4 border-top">
+    <!--<footer class="container border-top py-4">-->
+    <p class="float-end"><a href="#top" class="text-decoration-none">Back to top <i class="fa-solid fa-arrow-turn-up"></i></a></p>
+    <p>&copy; 2023 LiTeRa &emsp;&middot;&emsp; <a href="https://unsplash.com" class="text-danger">Unsplash <i class="fa-solid fa-heart"></i></a> <!--&middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>--></p>
+</footer>
 
-<!-- Core plugin JavaScript-->
-<!--<script src="vendor/jquery-easing/jquery.easing.min.js"></script>-->
+<!-- bootstrap javascript -->
+<script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Custom scripts for all pages-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/js/sb-admin-2.min.js"></script>
+<!-- higlight javascript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<!-- mathjax javascript -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="https://polyfill.io/v3/polyfill.js?features=es6"></script>
 
 
-<!-- Page level plugins -->
-<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-
-<!-- Page level custom scripts -->
-<!--<script src="js/demo/datatables-demo.js"></script>-->
-
-<script src="table.js"></script>
+<!-- mics javascript -->
+<script src="/js/timeline.js"></script>
+<script src="/js/cheatsheet.js"></script>
 
 </body>
-
 </html>
