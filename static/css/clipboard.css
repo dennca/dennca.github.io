@@ -1,0 +1,31 @@
+.clipboard {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.clipboard:active {
+    transform: scale(0.90);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+table kbd {
+    background-color: #ffc107 !important;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 2em !important;
+    }
+    table * {
+        font-size: x-small;
+    }
+}
+
+tr td:first-of-type {
+    padding-left: 2em;
+    /*text-align: center;*/
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Space Mono&family=Audiowide&family=Exo&display=swap');
+
+.container h2 {
+    font-variant: small-caps;
+}
+
+.card-header {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+* {
+    font-family: 'October Devanagari';
+    font-family: 'Audiowide', cursive;
+    font-family: 'Orbitron', cursive;
+    font-family: 'Space Mono', cursive;
+    font-family: 'Exo', sans-serif;
+}
+
+.carousel-caption h1 {
+    font-family: 'Orbitron', cursive;
+    font-family: 'Space Mono', cursive;
+}

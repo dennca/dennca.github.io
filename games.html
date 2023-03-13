@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quantum Quest</title>
+
+  <!-- boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <!-- highlight, font-awesome, animations -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- misc stylesheets -->
+  <link href="./css/carousel.css" rel="stylesheet">
+  <!--<link href="/css/features.css" rel="stylesheet">-->
+  <link href="./css/timeline.css" rel="stylesheet">
+  <link href="./css/styles.css" rel="stylesheet">
+
+  <style>
+    .carousel {
+      margin-bottom: 0px !important;
+    }
+    #overlay {
+      background: orange;
+      width: 100%;
+      height: 20vh;
+      padding: 200px 400px;
+      display: none !important;
+    }
+
+    #main {
+    }
+  </style>
+
+</head>
+
+<body id="top" class="pt-5 text-bg-dark">
+
+<header class="p-3 bg-dark border-bottom border-warning fixed-top">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-black text-decoration-none">
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="index.html" class="nav-link px-2 text-warning-emphasis"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="games.html" class="nav-link px-2 text-secondary-emphasis"><i class="fa-solid fa-list-check"></i> Story Games</a></li>
+        <li><a href="materials.html" class="nav-link px-2 text-secondary-emphasis"><i class="fa-solid fa-graduation-cap"></i> Information</a></li>
+        <li><a href="resources.html" class="nav-link px-2 text-secondary-emphasis"><i class="fa-solid fa-laptop-file"></i> Resources</a></li>
+        <li><a href="faq.html" class="nav-link px-2 text-secondary-emphasis"><i class="fa-solid fa-comments"></i> FAQ</a></li>
+      </ul>
+
+      <!--
+      <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://github.com/dennca.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small">
+              <li><a class="dropdown-item" href="#">Tests</a>
+              <li><a class="dropdown-item" href="resources.html">My progress</a>
+              </li><li><a class="dropdown-item" href="#">New project...</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+      </div>
+      -->
+    </div>
+  </div>
+</header>
+<div class="b-example-divider"></div>
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/carousel-0.png" style="object-position: center -200px;" class="bd-placeholder-img d-block w-100" alt="...">
+      <div class="container">
+        <div class="carousel-caption text-start text-white">
+          <h1>Futuristic Quantum Adventure</h1>
+          <p>Futuristic Quantum Adventure</p>
+          <nav class="breadcrumb bg-warning rounded px-2 " style="width: fit-content">
+            <kbd class="breadcrumb-item bg-transparent"><a href="./futuristic.html">Home</a></kbd>
+            <kbd class="breadcrumb-item bg-transparent active" aria-current="page"><a href="#main"><i class="fa-solid fa-chevron-down"></i></a></kbd>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/carousel-2.jpg" style="object-position: center -700px;" class="bd-placeholder-img d-block w-100" alt="...">
+      <div class="container">
+        <div class="carousel-caption text-start text-white">
+          <h1>H&X Laboratories</h1>
+          <p>Futuristic Quantum Adventure</p>
+          <nav class="breadcrumb bg-warning rounded px-2" style="width: fit-content;">
+            <kbd class="breadcrumb-item bg-transparent"><a href="./futuristic.html">Home</a></kbd>
+            <kbd class="breadcrumb-item bg-transparent active" aria-current="page"><a href="#main"><i class="fa-solid fa-chevron-down"></i></a></kbd>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/carousel-3.jpg" style="object-position: center -350px;" class="bd-placeholder-img d-block w-100" alt="...">
+      <div class="container">
+        <div class="carousel-caption text-end text-white">
+          <h1>H&X Laboratories</h1>
+          <p>Futuristic Quantum Adventure</p>
+          <nav class="breadcrumb bg-warning rounded px-2" style="width: fit-content; float: right;">
+            <kbd class="breadcrumb-item bg-transparent"><a href="./futuristic.html">Home</a></kbd>
+            <kbd class="breadcrumb-item bg-transparent active" aria-current="page"><a href="#main"><i class="fa-solid fa-chevron-down"></i></a></kbd>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="container px-4 py-5" id="main">
+
+  <h1 class="pb-2 border-bottom" style="font-variant: small-caps;">H&X Laboratories</h1>
+  <p>Futuristic Quantum Adventure</p>
+
+  <div id="xcustom-cards">
+    <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-5">
+
+      <div class="col reveal">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-size: 110%; background-image: url('img/carousel-1.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Futuristic Quantum Adventure</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://github.com/denvitko.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>Earth</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>3d</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col reveal">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-size: 100%; background-image: url('img/prompt-1.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Urban Theme Adventure</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://github.com/denvitko.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>Earth</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>3d</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <a href="futuristic.html" class="text-decoration-none">
+        <div class="col reveal">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-size: 100%; background-image: url('img/prompt-2.jpg');">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Medieval Times Adventure</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img src="https://github.com/denvitko.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                  <small>Pakistan</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                  <small>4d</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <div class="col reveal">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-size: 100%; background-image: url('img/carousel-3.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Natural Scenery Adventure</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://github.com/dennca.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <i class="fa-solid fa-heart"></i>&nbsp;<small>California</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>1h</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="modal fade" id="GOrwell" tabindex="-1" aria-labelledby="GOrwell" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4" id="GOrwellLabel">George Orwell</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="modal fade" id="JSeifert" tabindex="-1" aria-labelledby="JSeifert" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-1" id="JSeifertLabel">Jaroslav Seifert</h1><span class="fs-4 text-muted px-3">(1901 - 1986)</span>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="bio">
+          <kbd>básník</kbd> <kbd>novinář</kbd> <kbd>překladatel</kbd>
+          <ul style="list-style-type: '– '" class="py-3">
+            <li>narodil se v Praze na Žižkově, nedokončil studia, Nobelova cena</li>
+          </ul>
+        </div>
+
+        <div class="work py-2">
+          <h2>Díla</h2>
+          <ul>
+            <li>sb. <span class="work-title">Město v slzách</span></li>
+            <li>sb. Samá láska</li>
+            <li>sb. Na vlnách T.S.F. – poetismus</li>
+            <li>sb. Slavík zpívá špatně – poetismus</li>
+            <li>sb. Jablko z klína</li>
+            <li>sb. Ruce Venušiny</li>
+            <li>sb. Maminka – vzpomínka na maminku</li>
+            <li>sb. Chlapec a hvězdy – pohádkové motivy, melancholie</li>
+            <li>sb. Zhasněte světla – reakce na mnichovskou zradu</li>
+            <li>kniha Všecky krásy světa – paměti</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="VNezval" tabindex="-1" aria-labelledby="VNezval" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-2" id="VNezvalLabel">Vítězslav Nezval <span class="years">(1900 - 1958)</span></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="bio">
+          <kbd>básník</kbd> <kbd>spisovatel</kbd> <kbd>překladatel</kbd> <kbd>nár. umělec</kbd>
+          <ul style="list-style-type: '– '" class="py-3">
+            <li>narozen v Biskoupkách u Brna, rodina venkov. učitele, nedokončil studium práv a filozofie</li>
+            <li>psal do novin a časopisů, hodně cestoval, aktivní v KSČ, pohřben na Vyšehradě</li>
+            <li>vstoupil do Devětsilu, zakladatel poetismu, vůdčí osobnost českého surrealismu</li>
+            <li>ocenění Národní umělec</li>
+            <li>tvorba: lehkost, rytmus a hudebnost, odvaha experimentovat, hra se slovy, fantazie </li>
+          </ul>
+        </div>
+        <div class="work">
+          <h2 class="fs-4">Díla</h2>
+          <h3 class="fs-5">Poezie</h3>
+          <ul>
+            <li>b. <span class="work-title">Most</span> – proletářská, středoškolská studia, vzpomínky na domov</li>
+            <li>
+              sb. <span class="work-title">Pantomima</span> – poetismus, hříčky a kaligramy, scénky
+              <ul>
+                <li>b. <span class="work-title">Abeceda</span> – inspirace Rimbaudem, volné asociace, 4verší pro každé písmeno</li>
+                <li>b. <span class="work-title">Podivuhodný kouzelník</span> – poetismus, věnována Mahenovi, tajemství a krása
+                  života, fantazie, odmítnutí starého, opakování čísla 7</li>
+              </ul>
+            </li>
+            <li>
+              cyklus <span class="work-title">Básně noci</span> – poetismus, radost x smutek, život x smrt
+              <ul>
+                <li>sb. <span class="work-title">Akrobat</span> – poetismus</li>
+                <li>sb. <span class="work-title">Edison</span> – 5 zpěvů, více témat, pravidelné refrény, obdiv techniky a tvůrčí síly</li>
+              </ul>
+            </li>
+            <li>sb. <span class="work-title">Sbohem a šáteček</span> – pomezí poetismu a surrealismu, okouzlení z cesty po Fr. a It.</li>
+            <li>sb. <span class="work-title">Praha s prsty deště</span> – surrealismus, prolínání minulosti a přítomnosti</li>
+            <li>sb. <span class="work-title">Žena v množném čísle</span> – surrealismus, obrazotvornost a fantazie</li>
+            <li>sb. <span class="work-title">Absolutní hrobař</span> – surrealismus, odpor k fašismu</li>
+            <li>sb. <span class="work-title">52 hořských balad věčného studenta Roberta Davida</span> – anonymně, sociální</li>
+            <li>sb. <span class="work-title">Pět minut za městem</span> – přírodní lyrika, pouto k vlasti, odpor k okupantům</li>
+            <li>sb. <span class="work-title">Matka naděje</span> – osud těžce nemocné matky a osud národa ohroženého fašismem</li>
+            <li>sb. <span class="work-title">Pět minut za městem</span> – přírodní lyrika, pouto k vlasti, odpor k okupantům</li>
+            <li>sb. <span class="work-title">Historický obraz</span>, <span class="work-title">Stalin</span>, <span class="work-title">Zpěv míru</span>, <span class="work-title">Z domoviny</span>, <span class="work-title">Křídla</span>, <span class="work-title">Chrpy a města</span> – 50. léta </li>
+          </ul>
+          <h3 class="fs-5">Próza</h3>
+          <ul>
+            <li><span class="work-title">Valérie a týden divů</span> – černý román, pomezí snu a skutečnosti</li>
+            <li><span class="work-title">Anička skřítek a Slaměný Hubert</span> – pro děti</li>
+            <li><span class="work-title">Z mého života</span> – paměti</li>
+            <li><span class="work-title">Pražský chodec</span> – cestopis</li>
+          </ul>
+          <h3 class="fs-5">Drama</h3>
+          <ul>
+            <li><span class="work-title">Milenci z kiosku</span> – kritika doby a revoluční tendence</li>
+            <li><span class="work-title">Manon Lescaut</span> – veršované, překlad, kněz De Grieux se zamiluje do krásné Manon</li>
+            <li><span class="work-title">Dnes ještě zapadá slunce nad Atlantidou</span> – nebezpečí atomové války </li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer class="container py-4 border-top">
+  <!--<footer class="container border-top py-4">-->
+  <p class="float-end"><a href="#top" class="text-decoration-none">Back to top <i class="fa-solid fa-arrow-turn-up"></i></a></p>
+  <p>&copy; 2023 Quantum Quest &emsp;&middot;&emsp; <a href="" class="text-danger">Generative AIs <i class="fa-solid fa-heart"></i></a> <!--&middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>--></p>
+</footer>
+
+<!-- bootstrap javascript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+
+<!-- higlight javascript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<!-- mathjax javascript -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="https://polyfill.io/v3/polyfill.js?features=es6"></script>
+
+<!-- mics javascript -->
+<script src="./js/timeline.js"></script>
+<script src="./js/cheatsheet.js"></script>
+
+</body>
+</html>
